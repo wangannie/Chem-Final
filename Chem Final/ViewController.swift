@@ -63,30 +63,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     
     var orient = ""
     var eqName = "Equation Name"
-    
-//    var dictConstants = ["R" : ["gas constant","R","0.08206"]]
-//
-//    var dictVars =  ["pressure": ["P","L"," + "],"volume" : ["V","L"," + "], "moles" : ["n","R"," + "] ,"temperature" : ["T","R"," + "]]
-    
+
     var arrVars = [Variable(symbol: "R", name: "gas constant", orient: "R", negative: false, value: 0.08206),Variable(symbol: "P", name: "pressure", orient: "L", negative: false),Variable(symbol: "V", name: "volume", orient: "L", negative: false), Variable(symbol: "n", name: "moles", orient: "R", negative: false),Variable(symbol: "T", name: "temperature", orient: "R", negative: false)]
     
     lazy var pvnrt = Formula(name: "Ideal Gas Law", vars: arrVars)
-    
-    //    var dictConstants = ["h": ["Planck's constant","R","6.626e-34"]]
-    //    var dictVars = ["energy": ["E","L"," + "],"frequency" : ["v","R"," + "]]
-    
-    //    var dictConstants = ["c": ["speed of light","L","2.998e8"]]
-    //    var dictVars = ["wavelength": ["λ","R"," + "],"frequency" : ["v","R"," + "]]
-    
-    //    var dictConstants = ["F": ["Faraday's constant","R","96485"]]
-    //    var dictVars = ["moles": ["n","R"," - "],"standard red. potential" : ["E°","R"," + "], "standard free energy" : ["ΔG°","L"," + "]]
-    
-    //half life
-    //  dictConstants = ["ln(2)": ["ln(2)","R","0.693"]]
-    //    var dictVars = ["half-life": ["t(1/2)","L"," + ", "sec"],"rate constant" : ["k","L"," + ", "1/(M*sec)"]]
-    
-    //    var dictConstants = [String: [String]]()
-    //    var dictVars = ["heat": ["q","L"," + ","J"],"mass" : ["m","R"," + ","g"], "specific heat capacity" : ["c","R"," + ","J/(g*C°)"], "change in temp" : ["ΔT","R", " + " , "°K"]]
     
     private var arrVarLabels = [UILabel]()
     private var lblNumerators = [UILabel]()
@@ -399,7 +379,4 @@ extension Array where Element : Collection {
     subscript(column column : Element.Index) -> [ Element.Iterator.Element ] {
         return map { $0[ column ] }
     }
-    
-    
-    
 }

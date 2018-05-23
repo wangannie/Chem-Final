@@ -16,6 +16,7 @@
 		93445B3820AF0CD6002B9ADA /* Chem_Final.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 93445B3620AF0CD6002B9ADA /* Chem_Final.xcdatamodeld */; };
 		93445B3A20AF0CD9002B9ADA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93445B3920AF0CD9002B9ADA /* Assets.xcassets */; };
 		93445B3D20AF0CD9002B9ADA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93445B3B20AF0CD9002B9ADA /* LaunchScreen.storyboard */; };
+		93C40B1520B50D3600742DCE /* formulas in Resources */ = {isa = PBXBuildFile; fileRef = 93C40B1420B50D3600742DCE /* formulas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		93445B3920AF0CD9002B9ADA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		93445B3C20AF0CD9002B9ADA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		93445B3E20AF0CD9002B9ADA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93C40B1420B50D3600742DCE /* formulas */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = formulas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		93445B2E20AF0CD6002B9ADA /* Chem Final */ = {
 			isa = PBXGroup;
 			children = (
+				93C40B1420B50D3600742DCE /* formulas */,
 				93445B2F20AF0CD6002B9ADA /* AppDelegate.swift */,
 				93445B3120AF0CD6002B9ADA /* ViewController.swift */,
 				93445B3320AF0CD6002B9ADA /* Main.storyboard */,
@@ -135,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93445B3D20AF0CD9002B9ADA /* LaunchScreen.storyboard in Resources */,
+				93C40B1520B50D3600742DCE /* formulas in Resources */,
 				93445B3A20AF0CD9002B9ADA /* Assets.xcassets in Resources */,
 				93445B3520AF0CD6002B9ADA /* Main.storyboard in Resources */,
 			);
