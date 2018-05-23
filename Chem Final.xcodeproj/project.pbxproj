@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		932CF07620B4C8EE000FB19A /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CF07520B4C8EE000FB19A /* Formula.swift */; };
+		932CF07820B4C967000FB19A /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CF07720B4C967000FB19A /* Variable.swift */; };
+		932CF07A20B4CF36000FB19A /* backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CF07920B4CF36000FB19A /* backup.swift */; };
 		93445B3020AF0CD6002B9ADA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93445B2F20AF0CD6002B9ADA /* AppDelegate.swift */; };
 		93445B3220AF0CD6002B9ADA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93445B3120AF0CD6002B9ADA /* ViewController.swift */; };
 		93445B3520AF0CD6002B9ADA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93445B3320AF0CD6002B9ADA /* Main.storyboard */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		932CF07520B4C8EE000FB19A /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
+		932CF07720B4C967000FB19A /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
+		932CF07920B4CF36000FB19A /* backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backup.swift; sourceTree = "<group>"; };
 		93445B2C20AF0CD6002B9ADA /* Chem Final.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Chem Final.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		93445B2F20AF0CD6002B9ADA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93445B3120AF0CD6002B9ADA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +69,9 @@
 				93445B3B20AF0CD9002B9ADA /* LaunchScreen.storyboard */,
 				93445B3E20AF0CD9002B9ADA /* Info.plist */,
 				93445B3620AF0CD6002B9ADA /* Chem_Final.xcdatamodeld */,
+				932CF07520B4C8EE000FB19A /* Formula.swift */,
+				932CF07720B4C967000FB19A /* Variable.swift */,
+				932CF07920B4CF36000FB19A /* backup.swift */,
 			);
 			path = "Chem Final";
 			sourceTree = "<group>";
@@ -139,8 +148,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				93445B3220AF0CD6002B9ADA /* ViewController.swift in Sources */,
+				932CF07A20B4CF36000FB19A /* backup.swift in Sources */,
 				93445B3820AF0CD6002B9ADA /* Chem_Final.xcdatamodeld in Sources */,
+				932CF07620B4C8EE000FB19A /* Formula.swift in Sources */,
 				93445B3020AF0CD6002B9ADA /* AppDelegate.swift in Sources */,
+				932CF07820B4C967000FB19A /* Variable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LL6VNS7E3C;
 				INFOPLIST_FILE = "Chem Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -302,6 +315,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LL6VNS7E3C;
 				INFOPLIST_FILE = "Chem Final/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

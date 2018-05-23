@@ -1,4 +1,4 @@
-//
+/*//
 //  ViewController.swift
 //  Chem Final
 //
@@ -64,9 +64,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     var orient = ""
     var eqName = "Equation Name"
     
-//    var dictConstants = ["R" : ["gas constant","R","0.08206"]]
-//
-//    var dictVars =  ["pressure": ["P","L"," + "],"volume" : ["V","L"," + "], "moles" : ["n","R"," + "] ,"temperature" : ["T","R"," + "]]
+    //    var dictConstants = ["R" : ["gas constant","R","0.08206"]]
+    //
+    //    var dictVars =  ["pressure": ["P","L"," + "],"volume" : ["V","L"," + "], "moles" : ["n","R"," + "] ,"temperature" : ["T","R"," + "]]
     
     var arrVars = [Variable(symbol: "R", name: "gas constant", orient: "R", negative: false, value: 0.08206),Variable(symbol: "P", name: "pressure", orient: "L", negative: false),Variable(symbol: "V", name: "volume", orient: "L", negative: false), Variable(symbol: "n", name: "moles", orient: "R", negative: false),Variable(symbol: "T", name: "temperature", orient: "R", negative: false)]
     
@@ -403,3 +403,4 @@ extension Array where Element : Collection {
     
     
 }
+*/
