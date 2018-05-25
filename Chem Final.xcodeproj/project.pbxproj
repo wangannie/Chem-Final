@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9328685D20B781D900A30EFF /* FormulaListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328685C20B781D900A30EFF /* FormulaListTableViewCell.swift */; };
 		9328685F20B7829A00A30EFF /* FormulaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328685E20B7829A00A30EFF /* FormulaTableViewController.swift */; };
+		9328686120B7A79600A30EFF /* EquationCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328686020B7A79600A30EFF /* EquationCollectionViewController.swift */; };
+		9328686320B7A81000A30EFF /* EquationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328686220B7A81000A30EFF /* EquationCollectionViewCell.swift */; };
+		9328686520B8295400A30EFF /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9328686420B8295400A30EFF /* SelectionViewController.swift */; };
 		932CF07620B4C8EE000FB19A /* Formula.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CF07520B4C8EE000FB19A /* Formula.swift */; };
 		932CF07820B4C967000FB19A /* Variable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CF07720B4C967000FB19A /* Variable.swift */; };
 		932CF07A20B4CF36000FB19A /* backup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932CF07920B4CF36000FB19A /* backup.swift */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		9328685C20B781D900A30EFF /* FormulaListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaListTableViewCell.swift; sourceTree = "<group>"; };
 		9328685E20B7829A00A30EFF /* FormulaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormulaTableViewController.swift; sourceTree = "<group>"; };
+		9328686020B7A79600A30EFF /* EquationCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationCollectionViewController.swift; sourceTree = "<group>"; };
+		9328686220B7A81000A30EFF /* EquationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquationCollectionViewCell.swift; sourceTree = "<group>"; };
+		9328686420B8295400A30EFF /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 		932CF07520B4C8EE000FB19A /* Formula.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formula.swift; sourceTree = "<group>"; };
 		932CF07720B4C967000FB19A /* Variable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Variable.swift; sourceTree = "<group>"; };
 		932CF07920B4CF36000FB19A /* backup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = backup.swift; sourceTree = "<group>"; };
@@ -73,6 +79,9 @@
 				93C40B1420B50D3600742DCE /* formulas */,
 				93445B2F20AF0CD6002B9ADA /* AppDelegate.swift */,
 				93445B3120AF0CD6002B9ADA /* ViewController.swift */,
+				9328686420B8295400A30EFF /* SelectionViewController.swift */,
+				9328686020B7A79600A30EFF /* EquationCollectionViewController.swift */,
+				9328686220B7A81000A30EFF /* EquationCollectionViewCell.swift */,
 				93445B3320AF0CD6002B9ADA /* Main.storyboard */,
 				93445B3920AF0CD9002B9ADA /* Assets.xcassets */,
 				93445B3E20AF0CD9002B9ADA /* Info.plist */,
@@ -157,10 +166,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9328686320B7A81000A30EFF /* EquationCollectionViewCell.swift in Sources */,
 				9328685F20B7829A00A30EFF /* FormulaTableViewController.swift in Sources */,
 				93445B3220AF0CD6002B9ADA /* ViewController.swift in Sources */,
 				932CF07A20B4CF36000FB19A /* backup.swift in Sources */,
 				93445B3820AF0CD6002B9ADA /* Chem_Final.xcdatamodeld in Sources */,
+				9328686520B8295400A30EFF /* SelectionViewController.swift in Sources */,
+				9328686120B7A79600A30EFF /* EquationCollectionViewController.swift in Sources */,
 				932CF07620B4C8EE000FB19A /* Formula.swift in Sources */,
 				93445B3020AF0CD6002B9ADA /* AppDelegate.swift in Sources */,
 				9328685D20B781D900A30EFF /* FormulaListTableViewCell.swift in Sources */,

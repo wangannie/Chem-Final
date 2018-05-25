@@ -9,7 +9,9 @@
 import UIKit
 
 class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    @IBOutlet weak var navTitle: UINavigationItem!
     @IBOutlet weak var btnSolveFor: UIButton!
+    
     @IBOutlet weak var picker: UIPickerView!
     @IBOutlet weak var lblVar1: UILabel!
     @IBOutlet weak var lblVar2: UILabel!
@@ -33,6 +35,33 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var txtVar1: UITextField!
     @IBOutlet weak var txtVar2: UITextField!
     @IBOutlet weak var txtVar3: UITextField!
+    
+    var eqNum = 1
+    
+    func showCalculator(Sender: UIButton!) {
+        let secondViewController:ViewController = UIViewController() as! ViewController
+        
+        self.present(secondViewController, animated: true, completion: nil)
+        
+    }
+    @IBOutlet weak var EqPicker: UIPickerView!
+    @IBAction func eq2(_ sender: Any) {
+        eqNum = 2
+    }
+    @IBAction func eq3(_ sender: Any) {
+        eqNum = 3
+    }
+    @IBAction func eq4(_ sender: Any) {
+        eqNum = 4
+    }
+    @IBAction func eq5(_ sender: Any) {
+        eqNum = 5
+    }
+    @IBAction func eq6(_ sender: Any) {
+        eqNum = 1
+    }
+    
+    
     
     @IBAction func editTxtVar1(_ sender: Any) {
         enterTextField(variableIndex: 0)
@@ -58,15 +87,48 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
     }
     
+    
+    @IBAction func eqPickerPressed(_ sender: Any) {
+        if EqPicker.isHidden{
+            EqPicker.isHidden = false
+        }
+    }
+    
     let btnBlue = UIColor(red: CGFloat(0/255.0), green: CGFloat(122/255.0), blue: CGFloat(255.0/255.0), alpha: CGFloat(1.0));
     let shadowGray = UIColor(red: CGFloat(0/255.0), green: CGFloat(0/255.0), blue: CGFloat(0/255.0), alpha: CGFloat(0.3));
-    
+    var labelText = "initial"
     var orient = ""
     var eqName = "Equation Name"
-
-    var arrVars = [Variable(symbol: "R", name: "gas constant", orient: "R", negative: false, value: 0.08206),Variable(symbol: "P", name: "pressure", orient: "L", negative: false),Variable(symbol: "V", name: "volume", orient: "L", negative: false), Variable(symbol: "n", name: "moles", orient: "R", negative: false),Variable(symbol: "T", name: "temperature", orient: "R", negative: false)]
     
-    lazy var pvnrt = Formula(name: "Ideal Gas Law", vars: arrVars)
+    //var arrVars : [Variable] = []
+    
+    //    [Variable(symbol: "R", name: "gas constant", orient: "R", negative: false, value: 0.08206),Variable(symbol: "P", name: "pressure", orient: "L", negative: false),Variable(symbol: "V", name: "volume", orient: "L", negative: false), Variable(symbol: "n", name: "moles", orient: "R", negative: false),Variable(symbol: "T", name: "temperature", orient: "R", negative: false)]
+    
+    var arrVarsE1 = [Variable(symbol: "R", name: "gas constant", orient: "R", negative: false, value: 0.08206),Variable(symbol: "P", name: "pressure", orient: "L", negative: false),Variable(symbol: "V", name: "volume", orient: "L", negative: false), Variable(symbol: "n", name: "moles", orient: "R", negative: false),Variable(symbol: "T", name: "temperature", orient: "R", negative: false)]
+    lazy var eq1 = Formula(name: "Ideal Gas Law", vars: arrVarsE1)
+    
+    var arrVarsE2 = [Variable(symbol: "h", name: "Planck's constant", orient: "R", negative: false, value: 6.626e-34),Variable(symbol: "E", name: "energy", orient: "L", negative: false),Variable(symbol: "v", name: "frequency", orient: "R", negative: false)]
+    lazy var eq2 = Formula(name: "Planck's Equation", vars: arrVarsE2)
+    
+    
+    var arrVarsE3 = [Variable(symbol: "c", name: "speed of light", orient: "L", negative: false, value: 2.998e8),Variable(symbol: "λ", name: "wavelength", orient: "R", negative: false),Variable(symbol: "v", name: "frequency", orient: "R", negative: false)]
+    lazy var eq3 = Formula(name: "Wavelength to frequency", vars: arrVarsE3)
+    
+    
+    var arrVarsE4 = [Variable(symbol: "F", name: "Faraday's constant", orient: "R", negative: false, value: 96485),Variable(symbol: "n", name: "moles", orient: "R", negative: true),Variable(symbol: "E°", name: "standard cell potential", orient: "R", negative: false),Variable(symbol: "ΔG°", name: "standard free energy", orient: "L", negative: false)]
+    lazy var eq4 = Formula(name: "Standard Gibb's Energy change", vars: arrVarsE4)
+    
+    var arrVarsE5 = [Variable(symbol: "ln(2)", name: "ln(2)", orient: "R", negative: false, value: 0.693),Variable(symbol: "t(1/2)", name: "half-life", orient: "L", negative: true),Variable(symbol: "k", name: "rate constant", orient: "L", negative: false)]
+    lazy var eq5 = Formula(name: "Half-life equation", vars: arrVarsE5)
+    
+    var arrVarsE6 = [Variable(symbol: "q", name: "heat", orient: "L", negative: true),Variable(symbol: "m", name: "mass", orient: "R", negative: false),Variable(symbol: "c", name: "specific heat capacity", orient: "R", negative: false), Variable(symbol: "ΔT", name: "temperature change", orient: "R", negative: false)]
+    lazy var eq6 = Formula(name: "Heat formula", vars: arrVarsE6)
+    
+    
+    
+    var pvnrt : Formula = Formula()
+    var formulas = [Formula]()
+    //= Formula(name: "Ideal Gas Law", vars: arrVars)
     
     private var arrVarLabels = [UILabel]()
     private var lblNumerators = [UILabel]()
@@ -74,8 +136,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     private var arrVarTexts = [UITextField]()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
+        super.viewDidLoad()
+        formulas = [eq1,eq2,eq3, eq4, eq5, eq6]
         
         arrVarLabels.append(lblVar1)
         arrVarLabels.append(lblVar2)
@@ -101,16 +164,28 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
         lblAns.isHidden = true
         picker.isHidden = true
+        EqPicker.isHidden = true
         self.picker.delegate = self
         self.picker.dataSource = self
         
-        resetForm(solveVar: (pvnrt.firstVar().name))
+        self.EqPicker.delegate = self
+        self.EqPicker.dataSource = self
+        
+        navTitle.title = pvnrt.name
+        setEquationForm(formtoset: formulas[0])
         self.hideKeyboardWhenTappedAround()
         navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier != "back") {
+            eqNum = Int(segue.identifier!)!
+            // pass data to next view
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -118,16 +193,30 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     // The number of rows of data
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pvnrt.varCount()
+        if(pickerView.tag == 0){
+            return pvnrt.varCount()
+        }else{
+            return formulas.count
+        }
     }
     // The data to return for the row and component (column) that's being passed in
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return pvnrt.getVarNames()[row]
+        if(pickerView.tag == 0){
+            return pvnrt.getVarNames()[row]
+        }else{
+            return formulas[row].name
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        resetForm(solveVar: pvnrt.getVarNames()[row])
+        if(pickerView.tag == 0){
+            resetForm(solveVar: pvnrt.getVarNames()[row])
+        }
+        else{
+            setEquationForm(formtoset: formulas[row])
+        }
     }
+    
     
     func hideFormula (){
         for label in lblNumerators{
@@ -187,8 +276,18 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             showFormula()
         }
     }
+    @IBOutlet weak var EqTitleButton: UIButton!
+    func setEquationForm (formtoset : Formula){
+        EqTitleButton.setTitle(formtoset.name, for: .normal)
+        EqTitleButton.isEnabled = true
+        EqPicker.isHidden=true
+        pvnrt = formtoset
+        
+        resetForm(solveVar: (pvnrt.firstVar().name))
+    }
     
     func resetForm (solveVar : String){
+        EqTitleButton.setTitle(pvnrt.name, for: .normal)
         btnSolveFor.setTitle(solveVar, for: .normal)
         btnSolveFor.isEnabled = true
         picker.isHidden=true
@@ -251,6 +350,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             arrVarTexts[index].isHidden = false
             arrVarLabels[index].isHidden = false
         }
+        picker.reloadAllComponents()
         
     }
     func hideAllVarLblTxt(){
@@ -364,6 +464,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
 }
+
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))

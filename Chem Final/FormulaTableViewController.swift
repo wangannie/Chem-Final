@@ -111,7 +111,12 @@ class FormulaTableViewController: UITableViewController {
         let eq5 = Formula(name: "Half-life equation", vars: arrVarsE5)
         
         var arrVarsE6 = [Variable(symbol: "q", name: "heat", orient: "L", negative: true),Variable(symbol: "m", name: "mass", orient: "R", negative: false),Variable(symbol: "c", name: "specific heat capacity", orient: "R", negative: false), Variable(symbol: "ΔT", name: "temperature change", orient: "R", negative: false)]
-        let eq6 = Formula(name: "Half-life equation", vars: arrVarsE6)
+        let eq6 = Formula(name: "Heat formula", vars: arrVarsE6)
+        
+        var arrVarsE7 = [Variable(symbol: "q", name: "heat", orient: "L", negative: true),Variable(symbol: "m", name: "mass", orient: "R", negative: false),Variable(symbol: "c", name: "specific heat capacity", orient: "R", negative: false), Variable(symbol: "ΔT", name: "temperature change", orient: "R", negative: false)]
+        let eq7 = Formula(name: "Heat formula", vars: arrVarsE7)
+        var arrVarsE8 = [Variable(symbol: "q", name: "heat", orient: "L", negative: true),Variable(symbol: "m", name: "mass", orient: "R", negative: false),Variable(symbol: "c", name: "specific heat capacity", orient: "R", negative: false), Variable(symbol: "ΔT", name: "temperature change", orient: "R", negative: false)]
+        let eq8 = Formula(name: "Heat formula", vars: arrVarsE8)
         
         formulas += [eq1,eq2,eq3, eq4, eq5, eq6]
         
